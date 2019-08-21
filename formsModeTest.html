@@ -9,7 +9,7 @@
     <p>This page contains elements of each role (see list of roles <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">here</a>) to test if they enable forms/application mode in different screen readers</p>
 
     <h2>Widget Roles</h2>
-    <h3>Button</h3>
+    <h3 id="button">Button</h3>
     <div id="button-div" role="button" tabindex=0></div>
     <h3>Checkbox</h3>
     <h3>Gridcell</h3>
@@ -55,8 +55,51 @@
     <h3>Group</h3>
     <h3>Heading</h3>
     <h3>Img</h3>
-    <h3>List</h3>
-    <div id="list-div" role="list"></div>
+    <h3 id="list">List</h3>
+    <p>For both lists below, the behavior is:
+        <ul>
+            <li>Keyboard only: Tab to selected item (first by default) and use ArrowUp/ArrowDown to navigate</li>
+            <li>VoiceOver: Forms mode is not enabled. ArrowLeft/ArrowRight moves through list.
+                Note that if the list item contains div's or other elements, may place soft focus on each sub-element individually
+            </li>
+        </ul>
+    </p>
+    <h4 id="plain-list">Plain List</h4>
+    <div id="list-div" role="list">
+        <div role="listitem">Item 1</div>
+        <div role="listitem">Item 2</div>
+        <div role="listitem">Item 3</div>
+        <div role="listitem">Item 4</div>
+        <div role="listitem">Item 5</div>
+    </div>
+    <h4 id="spans-list">Listitems with spans</h4>
+    <div id="spans-list-div">
+        <div role="listitem">
+            <span>Span 1</span>
+            <span>Span 2</span>
+            <span>Span 3</span>
+        </div>
+        <div role="listitem">
+            <span>Span 4</span>
+            <span>Span 5</span>
+            <span>Span 6</span>
+        </div>
+        <div role="listitem">
+            <span>Span 7</span>
+            <span>Span 8</span>
+            <span>Span 9</span>
+        </div>
+        <div role="listitem">
+            <span>Span 10</span>
+            <span>Span 11</span>
+            <span>Span 12</span>
+        </div>
+        <div role="listitem">
+            <span>Span 13</span>
+            <span>Span 14</span>
+            <span>Span 15</span>
+        </div>
+    </div>
 
     <h3>ListItem</h3>
     <h3>Math</h3>
