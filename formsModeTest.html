@@ -58,10 +58,13 @@
     <h3 id="list">List</h3>
     <p>For both lists below, the behavior is:
         <ul>
-            <li>Keyboard only: Tab to selected item (first by default) and use ArrowUp/ArrowDown to navigate</li>
-            <li>VoiceOver: Forms mode is not enabled. ArrowLeft/ArrowRight moves through list.
-                Note that if the list item contains div's or other elements, may place soft focus on each sub-element individually
+            <li><b>Keyboard only: </b> Tab to selected item (first by default) and use ArrowUp/ArrowDown to navigate</li>
+            <li><b>Both screen readers: </b>  Forms mode is not enabled.
+                Arrow keys move through the list without triggering the keydown handler on the listItems.
+                If the list item contains div's or other elements, may place soft focus on each sub-element individually
             </li>
+            <li><b>VoiceOver: </b> ArrowLeft/ArrowRight moves through list items.</li>
+            <li><b>NVDA: </b> ArrowUp/ArrowDown moves through list items.</li>
         </ul>
     </p>
     <h4 id="plain-list">Plain List</h4>
